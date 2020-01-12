@@ -7,16 +7,6 @@ fetch('https://randomuser.me/api/?results=12')
       for(let i = 0; i < myJson.results.length; i++){
         users.push(myJson.results[i]);
       }
-  })
+  });
 
-//   users.forEach(element => console.log(element));
-
-for(let i = 0; i < users.length; i++){
-    console.log(users[i]);
-}
-
-
-// let html = '<div class="userCard">';
-// html+= `<h2>User Goes Here</h2>`;
-// html += '</div>';
-// directory.innerHTML = html;
+  users.forEach(element => console.log(element));
