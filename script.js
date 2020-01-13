@@ -28,7 +28,7 @@ function modalHTML(employee){
     html += `<img class="xOut" src="assets/close_button.svg" alt="Close Button" title="close button by Henning Gross from the Noun Project">`
     html += `<div class="leftArrow"><img class="arrow" id="left" src="assets/arrow_left.svg"></div>`;
     html += `<div class="modalBody">`;
-    html += `<img class="headshot" src=${employees[employee].picture.large} alt="Employee Headshot">`;
+    html += `<img class="modalHeadshot" src=${employees[employee].picture.large} alt="Employee Headshot">`;
     html += `<h4>${employees[employee].name.first} ${employees[employee].name.last}</h4>`;
     html += `<p>${employees[employee].email}</p>`;
     html += `<p>${employees[employee].location.city}</p>`;
@@ -75,6 +75,18 @@ document.onkeydown = function(e){
     if(e.keyCode === 27){
         modal.innerHTML = "";
         modal.style.display = "none";
+    } else if (e.keyCode === 37){
+        if (employee === 0) {
+            employee = 13;
+        }
+        employee -= 1;
+        modalHTML(employee);
+    } else if (e.keyCode === 39){
+        if (employee === 11) {
+            employee = -1;
+        }
+        employee += 1;
+        modalHTML(employee);
     }
 };
 
