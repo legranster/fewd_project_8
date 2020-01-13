@@ -26,7 +26,7 @@ fetch('https://randomuser.me/api/?nat=us,gb&results=12')
 function modalHTML(employee){
     let html = `<div class="modalCard">`;
     html += `<img class="xOut" src="assets/close_button.svg" alt="Close Button" title="close button by Henning Gross from the Noun Project">`
-    html += `<div class="leftArrow"><img class="arrow" id="left" src="assets/arrow_left.svg"></div>`;
+    html += `<div class="leftArrow"><img class="arrow" id="left" src="assets/arrow_left.svg" alt="Arrow by Ghiyats Mujtaba from the Noun Project"></div>`;
     html += `<div class="modalBody">`;
     html += `<img class="modalHeadshot" src=${employees[employee].picture.large} alt="Employee Headshot">`;
     html += `<h4>${employees[employee].name.first} ${employees[employee].name.last}</h4>`;
@@ -37,7 +37,7 @@ function modalHTML(employee){
     html += `<p>${employees[employee].location.street.number} ${employees[employee].location.street.name} ${employees[employee].location.city}, ${employees[employee].location.state} ${employees[employee].location.postcode}</p>`;
     html += `<p>${employees[employee].dob.date.slice(5,7)}/${employees[employee].dob.date.slice(8,10)}/${employees[employee].dob.date.slice(0,4)}</p>`;
     html += `</div>`;
-    html += `<div class="rightArrow"><img class="arrow" id="right" src="assets/arrow_right.svg"></div>`;
+    html += `<div class="rightArrow"><img class="arrow" id="right" src="assets/arrow_right.svg" alt="Arrow by Ghiyats Mujtaba from the Noun Project"></div>`;
     html += `</div>`;
     modal.innerHTML = html;
     modal.style.display = 'block';
