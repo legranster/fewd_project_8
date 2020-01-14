@@ -110,6 +110,13 @@ hr {
     width: 80%;
 }
 
+.xOut,
+.leftArrow,
+.rightArrow,
+.card {
+    cursor: pointer;
+}
+
 .xOut{
     height: 50px;
     width: 50px;
